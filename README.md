@@ -12,9 +12,9 @@ Short version: web captions are basically clean, but 63 of DrawBench's 200 promp
 | GenEval | 553 | 0 | 0 |
 | T2I-CompBench | 2,399 | 0 | 0 |
 
-My guess at why: DrawBench came out with Imagen in May 2022, and DiffusionDB was scraped from the Stable Diffusion Discord in August 2022. People trying out a new model paste in the famous test prompts, and the prompt log records them. The two other benchmarks are from 2023, so they couldn't have leaked into DiffusionDB.
+My guess is that DrawBench came out with Imagen in May 2022, and DiffusionDB was scraped from the Stable Diffusion Discord in August 2022. People trying out a new model paste in the famous test prompts, and the prompt log records them. The two other benchmarks are from 2023, so they couldn't have leaked into DiffusionDB.
 
-The most famous prompts leaked the most. All 10 of DrawBench's "Gary Marcus et al." prompts are in there (the donkey and octopus playing tug-of-war, the Supreme Court justices playing baseball against the FBI), and so are two of its intentional typos, "Tcennis rpacket" and "Bzaseball galove", which nobody types by accident.
+The most famous prompts leaked the most. All 10 of DrawBench's "Gary Marcus et al." prompts are in there (the donkey and octopus playing tug-of-war, the Supreme Court justices playing baseball against the FBI), and so are two of its intentional typos, "Tcennis rpacket" and "Bzaseball galove", which are not accidental typos.
 
 ![drawbench leaks by category](figures/drawbench_leaks_by_category.png)
 
@@ -26,7 +26,7 @@ Everything gets lowercased and stripped of punctuation, then I match all 3,152 p
 
 DataComp is about 340GB of parquet, too big for my laptop, so `match_corpus.py` downloads one file at a time, scans it, and deletes it. The full run took about 6 hours on a MacBook with 8GB of RAM and no GPU.
 
-Raw matches include a lot of noise. "a photo of a teddy bear" (GenEval) obviously shows up in web captions. So every match for a prompt of 6+ words, plus every short DrawBench match, got labeled as a leak or as generic. That's 111 matches in total, all in [`results/review.csv`](results/review.csv). The rule was roughly: whole distinctive prompt copied = leak; short everyday phrase inside an unrelated caption = generic. The labels were done by rule plus a pass with Claude, and I spot-checked them. The `labeled_by` column says which.
+Raw matches include a lot of noise. "a photo of a teddy bear" (GenEval) obviously shows up in web captions. So every match for a prompt of 6+ words, plus every short DrawBench match, got labeled as a leak or as generic. That's 111 matches in total, all in [`results/review.csv`](results/review.csv). The rule was ~ whole distinctive prompt copied = leak; short everyday phrase inside an unrelated caption = generic. The labels were done by rule plus a pass with Claude, and I spot-checked them. The `labeled_by` column says which.
 
 ## Caveats
 
