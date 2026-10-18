@@ -18,7 +18,7 @@ The most prominent prompts leaked most often. All 10 prompts in DrawBench's "Gar
 
 ![drawbench leaks by category](figures/drawbench_leaks_by_category.png)
 
-The 4 DrawBench matches in DataComp all come from the "Descriptions" category, which uses dictionary definitions ("A mechanical or electrical device for measuring time."). Stock photo sites caption images with the same definitions, so these matches are coincidental rather than leaks.
+The 4 DrawBench matches in DataComp all come from the "Descriptions" category, which uses dictionary definitions ("A mechanical or electrical device for measuring time."). Stock photo sites caption images with the same definitions, so these matches are coincidental instead of leaks.
 
 ## Method
 
@@ -26,7 +26,7 @@ All text is lowercased and stripped of punctuation, and the 3,152 prompts are ma
 
 DataComp is roughly 340GB of parquet files, so `match_corpus.py` streams it: each file is downloaded, scanned, and deleted. The full run took about 6 hours on a MacBook with 8GB of RAM and no GPU.
 
-Raw matches contain substantial noise; short GenEval prompts such as "a photo of a teddy bear" occur naturally in web captions. Every match for a prompt of 6+ words, plus every short DrawBench match, was therefore labeled as a leak or as generic: 111 matches in total, listed in [`results/review.csv`](results/review.csv). A distinctive prompt copied whole counts as a leak; a short everyday phrase within an unrelated caption counts as generic. Labels were assigned by rule, reviewed with Claude, and spot-checked by the author; the `labeled_by` column records which.
+Raw matches contain substantial noise, and short GenEval prompts such as "a photo of a teddy bear" occur naturally in web captions. Every match for a prompt of 6+ words, plus every short DrawBench match, was therefore labeled as a leak or as generic. 111 matches in total, listed in [`results/review.csv`](results/review.csv). A distinctive prompt copied whole counts as a leak, and a short everyday phrase within an unrelated caption counts as generic. Labels were assigned by rule, reviewed with Claude, and spot-checked by the author; the `labeled_by` column records which.
 
 ## Limitations
 
