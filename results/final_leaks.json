@@ -1,0 +1,26 @@
+{
+ "DataComp|drawbench": {
+  "leaked_prompts": 4,
+  "benchmark_size": 200
+ },
+ "DataComp|geneval": {
+  "leaked_prompts": 0,
+  "benchmark_size": 553
+ },
+ "DataComp|t2i_compbench": {
+  "leaked_prompts": 0,
+  "benchmark_size": 2399
+ },
+ "DiffusionDB|drawbench": {
+  "leaked_prompts": 63,
+  "benchmark_size": 200
+ },
+ "DiffusionDB|geneval": {
+  "leaked_prompts": 0,
+  "benchmark_size": 553
+ },
+ "DiffusionDB|t2i_compbench": {
+  "leaked_prompts": 0,
+  "benchmark_size": 2399
+ }
+}

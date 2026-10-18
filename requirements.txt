@@ -1,0 +1,3 @@
+pyarrow
+pyahocorasick
+matplotlib

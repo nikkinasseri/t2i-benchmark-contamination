@@ -1,0 +1,118 @@
+{
+ "n_files": 2664,
+ "n_captions": 1387173656,
+ "table": [
+  {
+   "benchmark": "ALL",
+   "length": "1-5 words",
+   "prompts": 434,
+   "any_match": 143,
+   "exact_match": 49
+  },
+  {
+   "benchmark": "ALL",
+   "length": "10+ words",
+   "prompts": 949,
+   "any_match": 3,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "ALL",
+   "length": "6-9 words",
+   "prompts": 1769,
+   "any_match": 25,
+   "exact_match": 3
+  },
+  {
+   "benchmark": "ALL",
+   "length": "all",
+   "prompts": 3152,
+   "any_match": 171,
+   "exact_match": 52
+  },
+  {
+   "benchmark": "drawbench",
+   "length": "1-5 words",
+   "prompts": 54,
+   "any_match": 10,
+   "exact_match": 2
+  },
+  {
+   "benchmark": "drawbench",
+   "length": "10+ words",
+   "prompts": 86,
+   "any_match": 3,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "drawbench",
+   "length": "6-9 words",
+   "prompts": 60,
+   "any_match": 1,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "drawbench",
+   "length": "all",
+   "prompts": 200,
+   "any_match": 14,
+   "exact_match": 2
+  },
+  {
+   "benchmark": "geneval",
+   "length": "1-5 words",
+   "prompts": 123,
+   "any_match": 61,
+   "exact_match": 6
+  },
+  {
+   "benchmark": "geneval",
+   "length": "10+ words",
+   "prompts": 124,
+   "any_match": 0,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "geneval",
+   "length": "6-9 words",
+   "prompts": 306,
+   "any_match": 16,
+   "exact_match": 3
+  },
+  {
+   "benchmark": "geneval",
+   "length": "all",
+   "prompts": 553,
+   "any_match": 77,
+   "exact_match": 9
+  },
+  {
+   "benchmark": "t2i_compbench",
+   "length": "1-5 words",
+   "prompts": 257,
+   "any_match": 72,
+   "exact_match": 41
+  },
+  {
+   "benchmark": "t2i_compbench",
+   "length": "10+ words",
+   "prompts": 739,
+   "any_match": 0,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "t2i_compbench",
+   "length": "6-9 words",
+   "prompts": 1403,
+   "any_match": 8,
+   "exact_match": 0
+  },
+  {
+   "benchmark": "t2i_compbench",
+   "length": "all",
+   "prompts": 2399,
+   "any_match": 80,
+   "exact_match": 41
+  }
+ ]
+}
